@@ -4,7 +4,6 @@ import java.util.HashMap;
 
 public class LargestSubArrayWith0Sum {
 
-
     public static int largestSubarrayWith0Sum(int[] arr) {
         HashMap<Integer, Integer> hm = new HashMap<>();
         int ans = 0;
@@ -16,9 +15,7 @@ public class LargestSubArrayWith0Sum {
                 hm.put(sum, i);
             } else {
                 int len = i - hm.get(sum);
-                if (len > ans) {
-                    ans = len;
-                }
+                ans = Math.max(ans, len);
             }
         }
         return ans;
