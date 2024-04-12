@@ -7,7 +7,7 @@ public class TwoSum {
 
 
     public static int[] twoSum(int[] arr, int target) {
-        int[] ans = {-1};
+        int[] ans = new int[0];
         HashMap<Integer, Integer> hashMap = new HashMap<>();
         for (int i = 0; i < arr.length; i++) {
             if (!hashMap.containsKey(target - arr[i])) {

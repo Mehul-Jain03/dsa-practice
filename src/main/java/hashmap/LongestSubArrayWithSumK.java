@@ -1,7 +1,6 @@
 package hashmap;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class LongestSubArrayWithSumK {
 
@@ -43,12 +42,37 @@ public class LongestSubArrayWithSumK {
         System.out.println(maxLength);
     }
 
+    //Optimal
+    public static int longestSubArrayWithSumKOptimalTwoPointer(int[] arr, int reqSum) {
+        int i = 0;
+        int j = 0;
+        int maxLength = 0;
+        int sum = arr[0];
+        while (i < arr.length) {
+            while (j <= i && sum > reqSum) {
+                sum = sum - arr[j];
+                j++;
+            }
+
+            if (sum == reqSum) {
+                maxLength = Math.max(maxLength, i - j + 1);
+            }
+            i++;
+            if (i < arr.length) {
+                sum = sum + arr[i];
+            }
+
+        }
+        return maxLength;
+    }
+
 
     public static void main(String[] args) {
         int[] arr = {10, 5, 1, 2, 7, 9};
         int sum = 15;
-         longestSubArrayWithSumKBruteForce(arr, sum);
+        longestSubArrayWithSumKBruteForce(arr, sum);
         longestSubArrayWithSumKOptimal(arr, sum);
+        System.out.println(longestSubArrayWithSumKOptimalTwoPointer(arr, sum));
     }
 
 }
