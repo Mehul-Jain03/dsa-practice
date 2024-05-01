@@ -6,7 +6,7 @@ import java.util.Stack;
 
 public class ReverseQueue {
 
-	public Queue<Integer> reverse(Queue<Integer> q) {
+	public void reverse(Queue<Integer> q) {
 		Stack<Integer> st = new Stack<Integer>();
 		while (!q.isEmpty()) {
 			st.push(q.remove());
@@ -14,8 +14,6 @@ public class ReverseQueue {
 		while (!st.isEmpty()) {
 			q.add(st.pop());
 		}
-
-		return q;
 	}
 
 	public static void main(String[] args) {
