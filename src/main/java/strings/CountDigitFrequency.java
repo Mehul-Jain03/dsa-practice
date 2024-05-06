@@ -4,20 +4,20 @@ public class CountDigitFrequency {
 
 
     public static int countDigitFrequency(int number, int digit) {
-        int rv = 0;
+        int result = 0;
         while (number > 0) {
-            int dig = number % 10;
+            int quotient = number % 10;
             number = number / 10;
-            if (dig == digit) {
-                rv++;
+            if (quotient == digit) {
+                result++;
             }
         }
-        return rv;
+        return result;
     }
 
 
     public static void main(String[] args) {
-        System.out.println(countDigitFrequency(100, 0));
+        System.out.println(countDigitFrequency(515, 5));
     }
 
 }

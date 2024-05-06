@@ -10,17 +10,11 @@ public class FirstDuplicateElement {
             return -1;
         }
         Map<Character, Integer> map = new LinkedHashMap<>();
-        for (char c : str.toCharArray()) {
-            if (!map.containsKey(c)) {
-                map.put(c, 1);
+        for (int i = 0; i < str.length(); i++) {
+            if (!map.containsKey(str.charAt(i))) {
+                map.put(str.charAt(i), i);
             } else {
-                map.put(c, map.get(c) + 1);
-            }
-        }
-
-        for (Map.Entry<Character, Integer> maps : map.entrySet()) {
-            if (maps.getValue() > 1) {
-                return str.indexOf(maps.getKey());
+                return map.get(str.charAt(i));
             }
         }
         return -1;
@@ -57,7 +51,7 @@ public class FirstDuplicateElement {
     }
 
     public static void main(String[] args) {
-        System.out.println(getIndexByMap("mmehul"));
+        System.out.println(getIndexByMap("ehmmul"));
         System.out.println(getIndexByBruteForce("mehhul"));
         System.out.println(getIndexByMethod("mmeehul"));
     }

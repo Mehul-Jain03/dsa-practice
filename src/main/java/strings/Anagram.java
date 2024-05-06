@@ -12,11 +12,7 @@ public class Anagram {
         char[] char2 = str2.toCharArray();
         Arrays.sort(char1);
         Arrays.sort(char2);
-        boolean equals = Arrays.equals(char1, char2);
-        if (equals) {
-            return true;
-        }
-        return false;
+        return Arrays.equals(char1, char2);
     }
 
 

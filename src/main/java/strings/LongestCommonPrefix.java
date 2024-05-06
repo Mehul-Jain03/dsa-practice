@@ -1,9 +1,10 @@
 package strings;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class LongestCommonPrefix {
-
 
     //Common String in all 2 words i.e. "Me";
     //When we sort the middle words will always have the character that first and last have.

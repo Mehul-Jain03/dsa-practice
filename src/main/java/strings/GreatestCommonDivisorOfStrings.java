@@ -25,5 +25,4 @@ public class GreatestCommonDivisorOfStrings {
         System.out.println(greatestCommonDivisorOfStrings(str1, str2));
     }
 
-
 }

@@ -7,7 +7,7 @@ public class CanStringBeAPalindrome {
 
 
     public static boolean palindromicCandidate(String str) {
-        if (str.length() == 0 || str == null) {
+        if (str.isEmpty()) {
             return false;
         }
         if (str.length() == 1) {
@@ -28,15 +28,11 @@ public class CanStringBeAPalindrome {
             }
         }
 
-        if (odd > 1) {
-            return false;
-        }
-
-        return true;
+        return odd <= 1;
     }
 
 
     public static void main(String[] args) {
-        System.out.println(palindromicCandidate("adad"));
+        System.out.println(palindromicCandidate("faceface"));
     }
 }

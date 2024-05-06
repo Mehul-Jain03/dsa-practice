@@ -29,6 +29,6 @@ public class FindAllAnagramInString {
     }
 
     public static void main(String[] args) {
-        System.out.println(countAnagram("abab", "ab"));
+        System.out.println(countAnagram("abab", "ba"));
     }
 }
