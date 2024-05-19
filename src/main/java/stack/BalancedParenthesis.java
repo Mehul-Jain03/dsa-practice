@@ -17,8 +17,7 @@ public class BalancedParenthesis {
             } else {
                 if (matching(stack.peek(), c)) {
                     stack.pop();
-                } else
-                    return false;
+                } else return false;
             }
         }
         return stack.isEmpty();
