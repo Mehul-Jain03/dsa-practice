@@ -5,16 +5,16 @@ public class MaxAndMinElementInArray {
     public static void find(int[] arr) {
         int max = Integer.MIN_VALUE;
         int min = Integer.MAX_VALUE;
-        for(int num : arr){
-            if(num>max){
+        for (int num : arr) {
+            if (num > max) {
                 max = num;
             }
-            if(num<min){
+            if (num < min) {
                 min = num;
             }
         }
-        System.out.println("Max number is "+max);
-        System.out.println("Min number is "+min);
+        System.out.println("Max number is " + max);
+        System.out.println("Min number is " + min);
     }
 
     public static void main(String[] args) {

@@ -25,8 +25,8 @@ public class MinPlatform {
 
 
     public static void main(String[] args) {
-        int arr[] = {100, 300, 500};
-        int dep[] = {900, 400, 600};
+        int[] arr = {100, 300, 500};
+        int[] dep = {900, 400, 600};
         int n = 3;
         System.out.println(minPlatform(arr, dep, n));
     }

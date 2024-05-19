@@ -4,13 +4,13 @@ public class MaxSumSubarray {
 
 
     //BruteForce
-    public static int maxSumSubArray(int[] arr){
+    public static int maxSumSubArray(int[] arr) {
         int maxSum = Integer.MIN_VALUE;
-        for(int i =0;i<arr.length;i++){
+        for (int i = 0; i < arr.length; i++) {
             int currentSum = 0;
-            for(int j =i;j<arr.length;j++){
-                currentSum = currentSum+arr[j];
-                if (currentSum>maxSum){
+            for (int j = i; j < arr.length; j++) {
+                currentSum = currentSum + arr[j];
+                if (currentSum > maxSum) {
                     maxSum = currentSum;
                 }
             }
@@ -19,7 +19,7 @@ public class MaxSumSubarray {
     }
 
     public static void main(String[] args) {
-        int[] arr = {-5,6,-1,10};
+        int[] arr = {-5, 6, -1, 10};
         System.out.println(maxSumSubArray(arr));
     }
 

@@ -18,8 +18,8 @@ public class MaxAndMinInArray {
     }
 
     public static void main(String[] args) {
-        int arr[] = {10, 15, 20, 5, 2, 9, 12, 39, 18, 6, 77, 55, 89};
-		findMinAndMax(arr);
+        int[] arr = {10, 15, 20, 5, 2, 9, 12, 39, 18, 6, 77, 55, 89};
+        findMinAndMax(arr);
     }
 
 }

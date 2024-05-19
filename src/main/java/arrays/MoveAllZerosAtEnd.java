@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 public class MoveAllZerosAtEnd {
 
-
     public static void moveZerosToEnd(int[] arr) {
         int j = -1;
         for (int i = 0; i < arr.length; i++) {

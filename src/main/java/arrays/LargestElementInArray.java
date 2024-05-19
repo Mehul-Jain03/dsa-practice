@@ -3,10 +3,10 @@ package arrays;
 public class LargestElementInArray {
 
 
-    public static int findLargestElement(int[] arr){
+    public static int findLargestElement(int[] arr) {
         int largest = arr[0];
-        for(int i : arr){
-            if(i>largest){
+        for (int i : arr) {
+            if (i > largest) {
                 largest = i;
             }
         }

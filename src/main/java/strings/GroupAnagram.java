@@ -8,7 +8,6 @@ import java.util.List;
 public class GroupAnagram {
 
     public static List<List<String>> groupAnagram(String[] strArr) {
-        List<List<String>> lists = new ArrayList<>();
         HashMap<String, List<String>> hm = new HashMap<>();
         for (String string : strArr) {
             char[] charArr = string.toCharArray();
@@ -19,8 +18,7 @@ public class GroupAnagram {
             }
             hm.get(strNew).add(string);
         }
-        lists.addAll(hm.values());
-        return lists;
+        return new ArrayList<>(hm.values());
     }
 
     public static void main(String[] args) {

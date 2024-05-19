@@ -11,7 +11,7 @@ public class MoveAllNegativesToOneSide {
             while (arr[left] < 0) left++;
             while (arr[right] > 0) right--;
 
-            if (left>=right) break;
+            if (left >= right) break;
             int temp = arr[left];
             arr[left] = arr[right];
             arr[right] = temp;
