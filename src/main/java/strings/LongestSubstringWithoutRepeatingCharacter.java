@@ -1,44 +1,31 @@
 package strings;
 
 import java.util.HashSet;
+import java.util.Set;
 
 public class LongestSubstringWithoutRepeatingCharacter {
-        public static int lengthOfLongestSubstring(String s) {
-            if(s == null || s.isEmpty()){
-                return 0;
-            }
-            else if(s.length() == 1){
-                return 1;
-            }
-            else {
-                int current = 0;
-                int max = 0;
-                for(int i = 0;i<s.length()-1;i++){
-                    for(int j=i;j<=s.length();j++){
-                        String str = s.substring(i,j);
-                        if(isUnique(str)){
-                            current = str.length();
-                        }
-                    }
-                    if(max<current){
-                        max = current;
-                    }
-                }
-                return max;
-            }
-        }
 
-        public static boolean isUnique(String str){
-            int length = str.length();
-            HashSet<Character> set = new HashSet<>();
-            for(char c : str.toCharArray()){
-                set.add(c);
+    public static void find(String s) {
+        int left = 0;
+        int right = 0;
+        int max = 0;
+        Set<Character> set = new HashSet<>();
+        while (right < s.length()) {
+            if (!set.contains(s.charAt(right))) {
+                set.add(s.charAt(right));
+                right++;
+                max = Math.max(max, set.size());
+            } else {
+                set.remove(s.charAt(left));
+                left++;
             }
-            return length == set.size();
         }
+        System.out.println(max);
+    }
 
     public static void main(String[] args) {
-        String str = "ab";
-        System.out.println(lengthOfLongestSubstring(str));
+        String str = "abcdabbwq";
+        find(str);
     }
+
 }

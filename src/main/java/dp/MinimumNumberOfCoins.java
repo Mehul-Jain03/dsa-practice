@@ -19,8 +19,8 @@ public class MinimumNumberOfCoins {
     }
 
     public static void main(String[] args) {
-        int[] coins = {1, 5, 2, 10};
-        System.out.println(minimumCoins(coins, 5));
+        int[] coins = {1, 5, 1, 10};
+        System.out.println(minimumCoins(coins, 37));
 
     }
 
