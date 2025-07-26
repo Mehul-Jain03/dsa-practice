@@ -3,31 +3,31 @@ package miscellaneous;
 import java.util.Base64;
 
 public class EncodeAndDecodeString {
-	
-	public static String getEncodedString(String str) {
-		return Base64.getEncoder().encodeToString(str.getBytes());
-	}
-	
+
+    public static String getEncodedString(String str) {
+        return Base64.getEncoder().encodeToString(str.getBytes());
+    }
+
     public static String getDecodedString(String str) {
-    	return new String(Base64.getDecoder().decode(str));
-		
-	}
+        return new String(Base64.getDecoder().decode(str));
 
-	public static void main(String[] args) {
+    }
 
-		String pass = "Automation123";
+    public static void main(String[] args) {
 
-		// Encode
-		String encodedPass = Base64.getEncoder().encodeToString(pass.getBytes());
-		System.out.println(encodedPass);
+        String pass = "Automation123";
 
-		// Decode
-		byte[] decodedPass = Base64.getDecoder().decode(encodedPass);
+        // Encode
+        String encodedPass = Base64.getEncoder().encodeToString(pass.getBytes());
+        System.out.println(encodedPass);
 
-		String passDecoded = new String(decodedPass);
+        // DecodeString
+        byte[] decodedPass = Base64.getDecoder().decode(encodedPass);
 
-		System.out.println(passDecoded);
+        String passDecoded = new String(decodedPass);
 
-	}
+        System.out.println(passDecoded);
+
+    }
 
 }
